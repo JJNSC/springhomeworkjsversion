@@ -23,4 +23,13 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/><!-- spring 에서는 ** 처럼 아스타를 2개 사용해야한다. -->
+			<mvc:exclude-mapping path="/resources/**"/>
+		<!-- bean : 객체 생성 -->
+			<bean class="com.mycompany.springwebapp.interceptor.Ch08LoginCheckInterceptor"/> 
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
 </beans>
