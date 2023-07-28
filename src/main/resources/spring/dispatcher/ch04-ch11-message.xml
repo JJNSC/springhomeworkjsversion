@@ -9,11 +9,15 @@
 
 	<!-- id 속성값을 반드시 작성 -->
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basenames" value="message.ch04_error">
+		<property name="basenames">
+			<list>
+				<value>message.ch04_error</value>
+				<value>message.ch11_internationalization</value>
+			</list>
 		</property>
 		<!-- message.ch04_error 에 지정된 파일 (message밑의)을 해석하고, 
 		코드에서 errors.form1.param1.required 같은 (validator.java에서 가져옴) 
 		키워드를 통해 같은 내용을 message로부터 가져와서 content에 뿌려줌  -->
 	</bean>
 		
-</beans>
+</beans>	

@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Ch08LoginCheckInterceptor implements HandlerInterceptor{
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-		log.info("실행");
+		//log.info("실행");
 		
 		HandlerMethod handlermethod = (HandlerMethod) handler;
 		Ch08Login login = handlermethod.getMethodAnnotation(Ch08Login.class);
